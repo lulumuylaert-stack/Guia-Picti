@@ -1093,10 +1093,15 @@
       .print-compact-section .step-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2mm 2.5mm;
-        align-items: start;
+        align-items: stretch;
+        grid-auto-rows: 1fr;
       }
 
       .print-compact-section .step-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
         min-height: 0;
         padding: 2.5mm;
         font-size: 7.8pt;
