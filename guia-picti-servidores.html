@@ -514,6 +514,7 @@
       max-width: none;
       margin-bottom: 14px;
       padding: 14px 16px;
+      border: 1px solid var(--line);
       border-left: 6px solid var(--teal);
       border-radius: 6px;
       background: var(--lilac-soft);
@@ -633,6 +634,29 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
+    }
+
+    .content-panel {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 7px solid var(--teal);
+      border-radius: 8px;
+      background: var(--lilac-soft);
+    }
+
+    .content-panel:nth-child(even) {
+      border-left-color: var(--purple);
+    }
+
+    .content-panel h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--purple-dark);
+    }
+
+    .content-panel .compact-list {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .step-grid {
@@ -1296,6 +1320,19 @@
         page-break-inside: avoid;
       }
 
+      .content-panel {
+        padding: 4mm 4.5mm;
+        border-width: 0.3mm;
+        border-left-width: 1.6mm;
+        border-radius: 2mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .content-panel h3 {
+        margin-bottom: 2mm;
+      }
+
       .step-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 4mm;
@@ -1870,7 +1907,7 @@
         <h2>Inadimplência e Pendências</h2>
       </div>
       <div class="two-columns">
-        <div>
+        <div class="content-panel">
           <h3>Podem gerar pendências</h3>
           <ul class="compact-list">
             <li>Não entrega do relatório final.</li>
@@ -1880,7 +1917,7 @@
             <li>Descumprimento das obrigações do edital.</li>
           </ul>
         </div>
-        <div>
+        <div class="content-panel">
           <h3>Consequências possíveis</h3>
           <ul class="compact-list">
             <li>Impedimento de participação em novos editais.</li>
